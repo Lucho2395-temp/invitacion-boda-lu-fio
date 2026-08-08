@@ -334,7 +334,7 @@ h1,h2,h3{font-family:'Fraunces', serif; font-weight:400; color:var(--ink);}
 
 /* ---------- SECTION HEADERS ---------- */
 .section{padding:110px 24px;}
-.section-head{text-align:center; margin-bottom:64px;}
+.section-head{text-align:center; margin-bottom:44px;}
 .section-head h2{font-size:clamp(1.9rem, 4.5vw, 2.6rem); margin-top:14px;}
 .section-head p{max-width:480px; margin:16px auto 0; opacity:0.75; font-size:0.95rem;}
 
