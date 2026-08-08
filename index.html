@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luis & Fiorelita — 26.09.2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Parisienne&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- SLIDER DE FOTOS (agrega tus fotos en assets/images/ y reemplaza cada .slide) -->
+<section class="slider" id="slider">
+  <div class="slider-track" id="sliderTrack">
+    <!-- Para poner tu foto, reemplaza el contenido de cada .slide por:
+         <img src="assets/images/foto1.jpg" alt=""> -->
+    <div class="slide"><img src="assets/images/Preboda_Fiore&Luis-1.jpg" alt=""></div>
+    <div class="slide"><img src="assets/images/Preboda_Fiore&Luis-2.jpg" alt=""></div>
+    <div class="slide"><img src="assets/images/Preboda_Fiore&Luis-3.jpg" alt=""></div>
+    <div class="slide"><img src="assets/images/Preboda_Fiore&Luis-4.jpg" alt=""></div>
+    <div class="slide"><img src="assets/images/Preboda_Fiore&Luis-5.jpg" alt=""></div>
+    <div class="slide"><img src="assets/images/Preboda_Fiore&Luis-6.jpg" alt=""></div>
+    <div class="slide"><img src="assets/images/Preboda_Fiore&Luis-7.jpg" alt=""></div>
+  </div>
+  <button class="slider-arrow prev" onclick="moveSlide(-1)" aria-label="Foto anterior">&#8249;</button>
+  <button class="slider-arrow next" onclick="moveSlide(1)" aria-label="Foto siguiente">&#8250;</button>
+  <div class="slider-dots" id="sliderDots"></div>
+</section>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-arch reveal in">
+    <span class="eyebrow hero-eyebrow">Nos casamos</span>
+    <div class="sprig" style="margin-bottom:20px;">
+      <svg width="150" height="34" viewBox="0 0 150 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#C1623B" stroke-width="1" stroke-linecap="round">
+          <path d="M75 30 C 75 18, 75 10, 75 4"/>
+          <path d="M75 26 C 66 24, 58 20, 52 12"/>
+          <path d="M75 20 C 66 18, 60 14, 55 8"/>
+          <path d="M75 26 C 84 24, 92 20, 98 12"/>
+          <path d="M75 20 C 84 18, 90 14, 95 8"/>
+          <circle cx="75" cy="4" r="2.2" fill="#C1623B" stroke="none"/>
+        </g>
+      </svg>
+    </div>
+    <h1 class="hero-names">Luis<span class="hero-amp">&amp;</span>Fiorelita</h1>
+    <p class="hero-sub">Salazar &nbsp;·&nbsp; Ayala</p>
+    <div class="hero-date">
+      <span>26</span><span class="dot"></span><span>09</span><span class="dot"></span><span>2026</span>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Desliza</span><span class="line"></span></div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-section reveal">
+  <div class="wrap">
+    <p class="quote-text">"Mejor es ir dos que uno solo, porque obtienen más fruto de su esfuerzo compartido. Si uno de ellos cae, el otro está allí para levantarlo; ¡ay del que cae estando solo, sin nadie que lo ayude a levantarse!"</p>
+    <p class="quote-source">Eclesiastés 4, 9-10</p>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="countdown-section reveal">
+  <span class="eyebrow">Cuenta regresiva</span>
+  <h2>Faltan pocos días para celebrarlo</h2>
+  <div class="countdown-grid" id="countdown">
+    <div class="cd-cell"><span class="cd-num" id="cd-days">00</span><span class="cd-label">Días</span></div>
+    <div class="cd-cell"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">Horas</span></div>
+    <div class="cd-cell"><span class="cd-num" id="cd-min">00</span><span class="cd-label">Min</span></div>
+    <div class="cd-cell"><span class="cd-num" id="cd-sec">00</span><span class="cd-label">Seg</span></div>
+  </div>
+</section>
+
+<!-- PADRINOS -->
+<section class="section padrinos-section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Con la bendición de</span>
+      <h2>Nuestros Padrinos</h2>
+      <p>Quienes nos acompañan y guían en este nuevo camino junto a nuestras familias.</p>
+    </div>
+    <div class="padrinos-grid reveal">
+      <div class="padrino">
+        <span class="role">Padrino</span>
+        <span class="name">Nombre del Padrino</span>
+      </div>
+      <div class="padrinos-div"></div>
+      <div class="padrino">
+        <span class="role">Madrina</span>
+        <span class="name">Nombre de la Madrina</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CEREMONIAS -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Itinerario</span>
+      <h2>Nuestras Ceremonias</h2>
+      <p>Nos encantaría contar contigo en cada momento de este día tan especial.</p>
+    </div>
+    <div class="cer-grid reveal">
+      <div class="cer-card">
+        <div class="cer-icon">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#C1623B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 2 L17 8"/>
+              <path d="M14 5 L20 5"/>
+              <path d="M9 32 V16 L17 9 L25 16 V32"/>
+              <path d="M15 32 V23 H19 V32"/>
+            </g>
+          </svg>
+        </div>
+        <span class="eyebrow">Ceremonia religiosa</span>
+        <h3>Parroquia San Martín de Porres</h3>
+        <p class="cer-row">Soledad 957</p>
+        <p class="cer-row">Recepción de invitados: 1:45 p. m.</p>
+        <span class="cer-time">Inicio: 2:00 p. m.</span><br>
+        <a class="cer-map" href="https://www.google.com/maps/place/Parroquia+San+Mart%C3%ADn+de+Porres+-+Vicariato+Apost%C3%B3lico+de+Iquitos./@-3.7516228,-73.257812,18z/data=!4m6!3m5!1s0x91ea10123efedf8d:0xf76ba1a9c0fcab89!8m2!3d-3.7524382!4d-73.2575402!16s%2Fg%2F11c1qc8bvv?entry=tts&g_ep=EgoyMDI2MDcxNS4wIPu8ASoASAFQAw%3D%3D&skid=e80bf835-62ee-4da5-b775-1ae22fecc742" target="_blank" rel="noopener">Ver ubicación</a>
+      </div>
+      <div class="cer-card">
+        <div class="cer-icon">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#C1623B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="13" cy="17" r="8"/>
+              <circle cx="21" cy="17" r="8"/>
+            </g>
+          </svg>
+        </div>
+        <span class="eyebrow">Recepción</span>
+        <h3>Casa Killa</h3>
+        <p class="cer-row">Boda civil y recepción social</p>
+        <p class="cer-row">Los Claveles 144, San Juan</p>
+        <span class="cer-time">Hora: 3:45 p. m.</span><br>
+        <a class="cer-map" href="https://www.google.com/maps/place/Casa+Killa,+Hospedaje+y+Eventos/@-3.7754351,-73.2970165,16.5z/data=!4m6!3m5!1s0x91ea0fb5d015f047:0x1dc6eed5731afda8!8m2!3d-3.7746892!4d-73.2960385!16s%2Fg%2F11vs7sllny?entry=tts&g_ep=EgoyMDI2MDcxNS4wIPu8ASoASAFQAw%3D%3D&skid=c1c34a04-eab0-4326-b0ee-9f7e8373cfe0" target="_blank" rel="noopener">Ver ubicación</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓDIGO DE VESTIMENTA -->
+<section class="section dress-section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Elegancia compartida</span>
+      <h2>Código de Vestimenta</h2>
+      <p>Una paleta suave y elegante para acompañar el día.</p>
+    </div>
+
+    <div class="dress-columns reveal">
+      <div class="dress-card">
+        <div class="dress-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#C1623B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 5 L16 9 L21 5"/>
+              <path d="M11 5 L5 8 L7 12 L9 11 V28 H23 V11 L25 12 L27 8 L21 5"/>
+              <path d="M16 9 L14 13 L16 16 L18 13 Z"/>
+            </g>
+          </svg>
+        </div>
+        <h3>Caballeros</h3>
+        <p>Traje formal, zapato y corbata (opcional).</p>
+      </div>
+      <div class="dress-card">
+        <div class="dress-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#C1623B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 5 C 13.5 5 12 7 12 9 C 12 10.5 13 11.5 13 11.5 L 6 29 H 26 L 19 11.5 C 19 11.5 20 10.5 20 9 C 20 7 18.5 5 16 5 Z"/>
+              <path d="M13 11.5 C 14 12.5 18 12.5 19 11.5"/>
+            </g>
+          </svg>
+        </div>
+        <h3>Damas</h3>
+        <p>Vestido largo.</p>
+      </div>
+    </div>
+
+    <p class="dress-note reveal">Agradeceremos evitar los colores <strong>blanco</strong> y <strong>beige</strong>, reservados para la novia. A continuación, una paleta de colores sugerida para guiar su elección:</p>
+
+    <div class="palette-wrap reveal">
+      <span class="palette-label">Paleta sugerida para invitados</span>
+      <div class="palette-grid">
+        <div class="swatch"><div class="swatch-blob" style="background:#C8543A;"></div><span class="swatch-name">Terracota</span></div>
+        <div class="swatch"><div class="swatch-blob" style="background:#99304A;"></div><span class="swatch-name">Vino</span></div>
+        <div class="swatch"><div class="swatch-blob" style="background:#EDA02E;"></div><span class="swatch-name">Mostaza</span></div>
+        <div class="swatch"><div class="swatch-blob" style="background:#C17A3D;"></div><span class="swatch-name">Ocre</span></div>
+        <div class="swatch"><div class="swatch-blob" style="background:#F2916A;"></div><span class="swatch-name">Coral</span></div>
+        <div class="swatch"><div class="swatch-blob" style="background:#D97C79;"></div><span class="swatch-name">Rosa palo</span></div>
+        <div class="swatch"><div class="swatch-blob" style="background:#1F6E82;"></div><span class="swatch-name">Azul petróleo</span></div>
+        <div class="swatch"><div class="swatch-blob" style="background:#9EC0CE;"></div><span class="swatch-name">Azul empolvado</span></div>
+        <div class="swatch"><div class="swatch-blob" style="background:#A6A83E;"></div><span class="swatch-name">Oliva</span></div>
+        <div class="swatch"><div class="swatch-blob" style="background:#22371A;"></div><span class="swatch-name">Verde bosque</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPORTANTE -->
+<section class="important-section reveal">
+  <div class="wrap">
+    <span class="eyebrow">Importante</span>
+    <div class="important-card">
+      <h3>Invitación exclusiva</h3>
+      <p>En nuestro deseo de compartir este momento especial con ustedes, hemos organizado una celebración íntima. Cada invitación ha sido asignada con mucho cariño, por ello les agradecemos respetar el número de invitados señalados en la portada de la invitación.</p>
+      <p>Agradecemos respetar esta indicación para cuidar la experiencia de todos los invitados.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section class="section rsvp-section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">RSVP</span>
+      <h2>Confirma tu Asistencia</h2>
+      <p>Tu presencia es el mejor regalo. Ayúdanos a organizar todo confirmando antes de la fecha límite.</p>
+    </div>
+    <form class="rsvp-card reveal" onsubmit="return enviarConfirmacion(event)">
+      <p class="rsvp-deadline">Confirmar antes del <strong>31 de agosto de 2026</strong></p>
+      <div class="field">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+      </div>
+      <div class="field">
+        <label for="asistencia">¿Asistirás?</label>
+        <select id="asistencia" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="Sí, asistiré">Sí, asistiré</option>
+          <option value="No podré asistir">No podré asistir</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="acompanantes">Número de acompañantes</label>
+        <input type="number" id="acompanantes" min="0" placeholder="0" value="0">
+      </div>
+      <button type="submit" class="btn-confirm">Confirmar asistencia</button>
+      <p class="rsvp-note">Se enviará tu confirmación por WhatsApp</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="reveal">
+  <div class="monogram">L&amp;F</div>
+  <p>Gracias por ser parte de nuestra historia y acompañarnos a celebrar el inicio de esta nueva vida juntos.</p>
+  <p class="date-small">26 de Septiembre, 2026</p>
+</footer>
+
+<!-- MÚSICA DE FONDO (agrega tu archivo dentro de assets/audio/ y actualiza el <source>) -->
+<audio id="bgMusic" loop>
+  <source src="assets/audio/Jamas-Camilo Sesto.mp3" type="audio/mpeg">
+</audio>
+<button class="music-toggle" id="musicToggle" onclick="toggleMusic()" aria-label="Reproducir música">
+  <svg class="icon-play" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9 18V5l12-2v13" stroke="#F6EEE1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="6" cy="18" r="3" stroke="#F6EEE1" stroke-width="1.6"/>
+    <circle cx="18" cy="16" r="3" stroke="#F6EEE1" stroke-width="1.6"/>
+  </svg>
+  <svg class="icon-pause" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="6" y="5" width="4" height="14" rx="1" fill="#F6EEE1"/>
+    <rect x="14" y="5" width="4" height="14" rx="1" fill="#F6EEE1"/>
+  </svg>
+</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
