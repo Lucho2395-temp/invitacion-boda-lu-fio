@@ -9,28 +9,22 @@
 // sin mostrar el bloque de nombre/cupos.
 
 let cupos = 0;
-let parametros = '';
 (function initGuestPersonalization(){
   const params = new URLSearchParams(window.location.search);
   const invitado = params.get('invitado');
   const invitado2 = params.get('invitado2');
   // let cupos = 0;
   if(invitado){
-    document.getElementById('guestName').textContent = `${invitado}`;
-    document.getElementById('introGuest').classList.add('show');
+    document.getElementById('nombre').value = `${invitado}`;
     cupos++;
   }
   if(invitado2){
-    document.getElementById('guestName').textContent += ` & ${invitado2}`;
-    document.getElementById('introGuest').classList.add('show');
+    document.getElementById('nombre').value += ` y ${invitado2}`;
     cupos++;
   }
   if(cupos>0){
-    document.getElementById('guestSeats').textContent =
-      `Hemos reservado ${cupos} ${cupos === 1 ? 'cupo' : 'cupos'} para ti`;
-    document.getElementById('introGuest').classList.add('show');
+    document.getElementById('acompanantes').value = `${cupos}`;
   }
-  parametros= params;
 })();
 
 function openEnvelope(){
