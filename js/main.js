@@ -16,6 +16,7 @@ let cupos = 0;
   // let cupos = 0;
   if(invitado){
     document.getElementById('nombre').value = `${invitado}`;
+    document.getElementById('nombre').readOnly = true;
     cupos++;
   }
   if(invitado2){
@@ -24,20 +25,9 @@ let cupos = 0;
   }
   if(cupos>0){
     document.getElementById('acompanantes').value = `${cupos}`;
+    document.getElementById('acompanantes').readOnly = true;
   }
 })();
-
-function openEnvelope(){
-  const scene = document.getElementById('envelopeScene');
-  if(scene.classList.contains('open')) return;
-  scene.classList.add('open');
-
-  // Tras la animación de apertura, ocultamos la pantalla del sobre
-  // y desplazamos suavemente hacia el slider de fotos.
- setTimeout(() => {
-  window.location.href = `main.html?${parametros.toString()}`;
-  }, 1500);
-}
 
 // ---------- Countdown a la fecha de la boda ----------
 const weddingDate = new Date("2026-09-26T00:00:00");
