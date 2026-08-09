@@ -2,6 +2,39 @@
 // Invitación de boda — Luis & Fiorelita
 // ==========================================================
 
+// ---------- Sobre de apertura (pantalla inicial) ----------
+// Personalización OPCIONAL por invitado vía parámetros en la URL:
+// index.html?invitado=Juan%20Casas&cupos=2
+// Si no se agregan parámetros, el sobre funciona igual, solo que
+// sin mostrar el bloque de nombre/cupos.
+(function initGuestPersonalization(){
+  const params = new URLSearchParams(window.location.search);
+  const invitado = params.get('invitado');
+  const cupos = params.get('cupos');
+  if(invitado){
+    document.getElementById('guestName').textContent = invitado;
+    document.getElementById('introGuest').classList.add('show');
+  }
+  if(cupos){
+    const n = parseInt(cupos, 10) || 1;
+    document.getElementById('guestSeats').textContent =
+      `Hemos reservado ${n} ${n === 1 ? 'cupo' : 'cupos'} para ti`;
+    document.getElementById('introGuest').classList.add('show');
+  }
+})();
+
+function openEnvelope(){
+  const scene = document.getElementById('envelopeScene');
+  if(scene.classList.contains('open')) return;
+  scene.classList.add('open');
+
+  // Tras la animación de apertura, ocultamos la pantalla del sobre
+  // y desplazamos suavemente hacia el slider de fotos.
+ setTimeout(() => {
+  window.location.href = 'main.html';
+  }, 1500);
+}
+
 // ---------- Countdown a la fecha de la boda ----------
 const weddingDate = new Date("2026-09-26T00:00:00");
 
