@@ -67,7 +67,7 @@ function enviarConfirmacion(e){
   const asistencia = document.getElementById('asistencia').value;
   const acompanantes = document.getElementById('acompanantes').value;
   const mensaje = `Hola, soy ${nombre}. Confirmo mi asistencia a la boda de Luis y Fiorelita: ${asistencia}. Número de acompañantes: ${acompanantes}.`;
-  const numeroWhatsApp = "51953295553";
+  const numeroWhatsApp = "51977969250";
   window.open(`https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`, "_blank");
   return false;
 }
