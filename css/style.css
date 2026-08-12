@@ -682,6 +682,65 @@ h2,h3{text-transform: uppercase;}
 }
 .swatch-name{font-size:0.68rem; letter-spacing:0.03em; opacity:0.75;}
 
+/* ---------- REGALO ---------- */
+.gift-section{background:var(--cream-2);}
+.gift-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:28px;
+  max-width:920px;
+  margin:0 auto;
+}
+@media (max-width:860px){ .gift-grid{grid-template-columns:1fr 1fr;} }
+@media (max-width:560px){ .gift-grid{grid-template-columns:1fr;} }
+.gift-card{
+  background:var(--cream);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:40px 26px 32px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.gift-icon{margin-bottom:18px; display:flex; justify-content:center;}
+.gift-card .eyebrow{display:block; margin-bottom:8px;}
+.gift-card h3{font-size:1.1rem; letter-spacing:0.02em; margin-bottom:14px;}
+.gift-row{font-size:0.82rem; line-height:1.6; opacity:0.82; word-break:break-word;}
+.gift-number{
+  font-family:'Fraunces', serif;
+  font-size:1.4rem;
+  letter-spacing:0.05em;
+  color:var(--terracota-dark);
+  margin:4px 0 20px;
+}
+.gift-card .gift-row:last-of-type{margin-bottom:20px;}
+.gift-copy{
+  margin-top:auto;
+  background:transparent;
+  border:1px solid var(--terracota);
+  color:var(--terracota-dark);
+  padding:11px 18px;
+  font-family:'Jost', sans-serif;
+  font-size:0.66rem;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  border-radius:3px;
+  cursor:pointer;
+  transition:background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.gift-copy:hover{background:var(--terracota); color:var(--cream);}
+.gift-copy.copied{background:var(--olive); border-color:var(--olive); color:var(--cream);}
+.gift-note{
+  text-align:center;
+  max-width:480px;
+  margin:46px auto 0;
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-size:1rem;
+  opacity:0.85;
+}
+
 /* ---------- IMPORTANTE ---------- */
 .important-section{
   background:var(--terracota);

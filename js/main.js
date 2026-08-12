@@ -129,6 +129,34 @@ if(slides.length){
   sliderEl.addEventListener('mouseleave', startAutoplay);
 }
 
+// ---------- Regalo: copiar número/cuenta ----------
+function copiarDato(btn){
+  const valor = btn.getAttribute('data-copy');
+  const original = btn.textContent;
+  const marcarCopiado = () => {
+    btn.textContent = '¡Copiado!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.classList.remove('copied');
+    }, 2000);
+  };
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(valor).then(marcarCopiado).catch(() => {});
+  } else {
+    // Fallback para navegadores/contextos sin Clipboard API
+    const temp = document.createElement('textarea');
+    temp.value = valor;
+    temp.style.position = 'fixed';
+    temp.style.opacity = '0';
+    document.body.appendChild(temp);
+    temp.focus();
+    temp.select();
+    try { document.execCommand('copy'); marcarCopiado(); } catch(e) {}
+    document.body.removeChild(temp);
+  }
+}
+
 // ---------- Botón flotante de música ----------
 function toggleMusic(){
   const audio = document.getElementById('bgMusic');
