@@ -25,7 +25,7 @@ let cupos = 0;
   }
   if(cupos>0){
     document.getElementById('acompanantes').value = `${cupos}`;
-    document.getElementById('acompanantes').readOnly = true;
+    //document.getElementById('acompanantes').readOnly = true;
   }
 })();
 
@@ -167,5 +167,19 @@ function toggleMusic(){
   } else {
     audio.pause();
     btn.classList.remove('playing');
+  }
+}
+
+function validar_cupos(id){
+  const input = document.getElementById(id);
+  let valor = parseInt(input.value, 10); 
+  if (isNaN(valor) || valor < 0) {
+    input.value = 0;
+  }
+  if(cupos > 0){
+    if (valor > cupos) {
+      input.value = cupos;
+      alert(`El número máximo de acompañantes permitidos es ${cupos}.`);
+    }
   }
 }

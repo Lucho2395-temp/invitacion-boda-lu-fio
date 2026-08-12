@@ -119,15 +119,6 @@
       <div class="cer-card">
         <div class="cer-icon">
           <img src="assets/images/boda-religiosa.png" alt="Boda Religiosa Logo" width="34" height="34">
-
-          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g stroke="#C1623B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 2 L17 8"/>
-              <path d="M14 5 L20 5"/>
-              <path d="M9 32 V16 L17 9 L25 16 V32"/>
-              <path d="M15 32 V23 H19 V32"/>
-            </g>
-          </svg>
         </div>
         <span class="eyebrow">Ceremonia religiosa</span>
         <h3>Parroquia San Martín de Porres</h3>
@@ -138,12 +129,7 @@
       </div>
       <div class="cer-card">
         <div class="cer-icon">
-          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g stroke="#C1623B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="13" cy="17" r="8"/>
-              <circle cx="21" cy="17" r="8"/>
-            </g>
-          </svg>
+          <img src="assets/images/boda-civil.png" alt="Boda Civil Logo" width="34" height="34">
         </div>
         <span class="eyebrow">Recepción</span>
         <h3>Casa Killa</h3>
@@ -285,7 +271,7 @@
       </div>
       <div class="field">
         <label for="acompanantes">Número de acompañantes</label>
-        <input type="number" id="acompanantes" min="0" placeholder="0" value="0">
+        <input type="number" id="acompanantes" onchange="validar_cupos(this.id)" min="0" placeholder="0" value="0">
       </div>
       <button type="submit" class="btn-confirm">Confirmar asistencia</button>
       <p class="rsvp-note">Se enviará tu confirmación por WhatsApp</p>
