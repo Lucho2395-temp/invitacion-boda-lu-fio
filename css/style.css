@@ -686,7 +686,7 @@ h2,h3{text-transform: uppercase;}
 .gift-section{background:var(--cream-2);}
 .gift-grid{
   display:grid;
-  grid-template-columns:repeat(2, 1fr);
+  grid-template-columns:repeat(3, 1fr);
   gap:28px;
   max-width:920px;
   margin:0 auto;
